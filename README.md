@@ -1,18 +1,18 @@
-# 🌌 Geek Omniverse
+#  Geek Omniverse
 
 Portal web sobre cultura geek en su totalidad: videojuegos, cómics de Marvel y DC, y los universos cinematográficos MCU y DCU. Noticias, reviews, rankings y guías en un solo lugar.
 
-## 👥 Autores
+##  Autores
 
 - Lucas Del Pino
 - Ulises Ferrari
 
-## 🚀 Tecnologías
+##  Tecnologías
 
 - HTML5, CSS3, JavaScript (vanilla)
 - Base de datos: PostgreSQL / MySQL (próximamente)
 
-## 📚 Secciones del sitio
+##  Secciones del sitio
 
 - **Noticias** — Novedades de videojuegos, MCU, DCU y cómics
 - **Reviews** — Críticas de películas, series, cómics y videojuegos
@@ -20,7 +20,7 @@ Portal web sobre cultura geek en su totalidad: videojuegos, cómics de Marvel y 
 - **Calendario de estrenos** — Próximos lanzamientos unificados (juegos, cine, cómics)
 - **Guías** — Órdenes de visionado, walkthroughs, guías de lectura
 
-## 🗄️ Base de datos (fase futura)
+##  Base de datos (fase futura)
 
 Entidades planificadas:
 - Usuarios
@@ -29,7 +29,7 @@ Entidades planificadas:
 - Favoritos
 - Calificaciones
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 ├── index.html
 ├── css/
@@ -40,10 +40,10 @@ Entidades planificadas:
 │   └── (imágenes y recursos)
 └── README.md
 
-## 📌 Estado del proyecto
+##  Estado del proyecto
 
 🔧 En desarrollo — Fase 1: Frontend estático
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
