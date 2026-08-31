@@ -6,7 +6,7 @@
   <title>Geek Omniverse — Videojuegos, Marvel y DC en un solo portal</title>
   <meta
     name="description"
-    content="Geek Omniverse: noticias, reviews, rankings, guías y comunidad sobre videojuegos, cómics de Marvel y DC, y los universos MCU/DCU"
+    content="Geek Omniverse: noticias, reviews, rankings, guías y comunidad sobre videojuegos, cómics de Marvel y DC, los universos MCU/DCU, y anime/manga."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,12 +14,12 @@
     href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
   <a class="sr-only" href="#main">Saltar al contenido principal</a>
 
-  <!--  HEADER / NAV  -->
+  
   <header class="site-header">
     <div class="site-header__bar">
       <a href="#top" class="logo">GEEK<span>OMNI</span>VERSE</a>
@@ -31,26 +31,27 @@
 
       <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
         <ul class="primary-nav__list">
+          <li><a class="nav-link" href="#noticias">Noticias</a></li>
+          <li><a class="nav-link" href="#reviews">Reviews</a></li>
           <li class="nav-group">
-            <button class="nav-group__trigger" aria-expanded="false">Contenido</button>
-            <div class="nav-group__menu">
-              <a href="#noticias">Noticias</a>
-              <a href="#reviews">Reviews</a>
-              <a href="#comics-cine">Cómics &amp; Cine</a>
-            </div>
-          </li>
-          <li class="nav-group">
-            <button class="nav-group__trigger" aria-expanded="false">Rankings</button>
+            <button class="nav-group__trigger" aria-expanded="false">Best Of</button>
             <div class="nav-group__menu">
               <a href="#top10">Top 10 Juegos</a>
               <a href="#calendario">Calendario</a>
             </div>
           </li>
           <li class="nav-group">
-            <button class="nav-group__trigger" aria-expanded="false">Aprender</button>
+            <button class="nav-group__trigger" aria-expanded="false">Guías &amp; Wiki</button>
             <div class="nav-group__menu">
               <a href="#guias">Guías</a>
               <a href="#wiki">Wiki / Personajes</a>
+            </div>
+          </li>
+          <li class="nav-group">
+            <button class="nav-group__trigger" aria-expanded="false">Entretenimiento</button>
+            <div class="nav-group__menu">
+              <a href="#comics-cine">Cómics &amp; Cine</a>
+              <a href="#anime-manga">Anime &amp; Manga</a>
             </div>
           </li>
           <li class="nav-group">
@@ -65,7 +66,7 @@
     </div>
   </header>
 
-  <!--  HERO  -->
+
   <section class="hero" id="top">
     <p class="hero__kicker">Issue №0 — Portada</p>
     <h1 class="hero__title">Todo el multiverso geek, en un solo portal</h1>
@@ -80,13 +81,13 @@
   </section>
 
   <main id="main">
-    <!--  1. NOTICIAS  -->
+
     <section class="page" id="noticias" style="--accent: var(--blue-616)">
       <div class="torn-edge"></div>
       <div class="container">
         <p class="eyebrow">Issue №1 — Noticias</p>
         <h2 class="section-title">Noticias</h2>
-        <p class="section-lede">Lo último del multiverso, actualizado por la redacción</p>
+        <p class="section-lede">Lo último del multiverso, actualizado por la redacción.</p>
 
         <div class="filter-bar" role="group" aria-label="Filtrar noticias por categoría">
           <button class="filter-btn is-active" data-filter="todos">Todos</button>
@@ -102,7 +103,7 @@
             <p class="panel__meta">14 ago 2026</p>
             <p class="panel__body">
               El estudio confirmó un parche que suma partidas cooperativas de hasta
-              cuatro jugadores, además de ajustes de balance en el modo historia
+              cuatro jugadores, además de ajustes de balance en el modo historia.
             </p>
             <a href="#" class="panel__link">Leer más →</a>
           </article>
@@ -124,7 +125,7 @@
             <p class="panel__meta">10 ago 2026</p>
             <p class="panel__body">
               La editorial confirmó un crossover entre dos títulos mensuales que
-              promete reordenar la línea temporal de varios personajes clave
+              promete reordenar la línea temporal de varios personajes clave.
             </p>
             <a href="#" class="panel__link">Leer más →</a>
           </article>
@@ -135,7 +136,7 @@
             <p class="panel__meta">8 ago 2026</p>
             <p class="panel__body">
               Inscripciones abiertas para el torneo online con premios en contenido
-              exclusivo dentro del juego para los primeros diez puestos
+              exclusivo dentro del juego para los primeros diez puestos.
             </p>
             <a href="#" class="panel__link">Leer más →</a>
           </article>
@@ -146,7 +147,7 @@
             <p class="panel__meta">5 ago 2026</p>
             <p class="panel__body">
               El estudio reveló parte del elenco de voces para la serie que
-              explorará una línea temporal alternativa poco vista en pantalla
+              explorará una línea temporal alternativa poco vista en pantalla.
             </p>
             <a href="#" class="panel__link">Leer más →</a>
           </article>
@@ -157,7 +158,7 @@
             <p class="panel__meta">2 ago 2026</p>
             <p class="panel__body">
               Se mostró un adelanto con estilo visual inspirado directamente en el
-              cómic original, algo poco común en adaptaciones recientes
+              cómic original, algo poco común en adaptaciones recientes.
             </p>
             <a href="#" class="panel__link">Leer más →</a>
           </article>
@@ -165,13 +166,13 @@
       </div>
     </section>
 
-    <!--  2. REVIEWS  -->
+
     <section class="page" id="reviews" style="--accent: var(--crimson)">
       <div class="torn-edge"></div>
       <div class="container">
         <p class="eyebrow">Issue №2 — Reviews</p>
         <h2 class="section-title">Reviews</h2>
-        <p class="section-lede">Análisis sin spoilers grandes, con nota y veredicto rápido</p>
+        <p class="section-lede">Análisis sin spoilers grandes, con nota y veredicto rápido.</p>
 
         <div class="panel-grid">
           <article class="panel review-panel">
@@ -180,7 +181,7 @@
             <h3 class="panel__title">Un mundo abierto que premia la exploración lenta</h3>
             <p class="panel__body">
               La curva de dificultad está bien pensada y el diseño de niveles invita
-              a desviarse del camino principal todo el tiempo
+              a desviarse del camino principal todo el tiempo.
             </p>
             <div class="review-lists">
               <div>
@@ -200,7 +201,7 @@
             <h3 class="panel__title">Entretenida, aunque previsible en su segundo acto</h3>
             <p class="panel__body">
               Las escenas de acción están bien coreografiadas, pero el guion se
-              apoya demasiado en referencias a entregas anteriores
+              apoya demasiado en referencias a entregas anteriores.
             </p>
             <div class="review-lists">
               <div>
@@ -220,7 +221,7 @@
             <h3 class="panel__title">Un tono propio que se anima a arriesgar</h3>
             <p class="panel__body">
               Se aleja del estilo de entregas pasadas y construye una identidad
-              visual coherente de principio a fin
+              visual coherente de principio a fin.
             </p>
             <div class="review-lists">
               <div>
@@ -237,144 +238,92 @@
       </div>
     </section>
 
-    <!--  3. CÓMICS & CINE  -->
-    <section class="page" id="comics-cine" style="--accent: var(--pop-yellow)">
+
+    <section class="page" id="top10" style="--accent: var(--pop-yellow)">
       <div class="torn-edge"></div>
       <div class="container">
-        <p class="eyebrow">Issue №3 — Cómics &amp; Cine</p>
-        <h2 class="section-title">Cómics &amp; Cine</h2>
-        <p class="section-lede">Marvel y DC, en papel y en pantalla, con contexto de saga</p>
-
-        <div class="panel-grid">
-          <article class="panel">
-            <span class="tag">Saga</span>
-            <h3 class="panel__title">Cómo se conectan las últimas fases del MCU</h3>
-            <p class="panel__body">
-              Repasamos los hilos narrativos que vienen tejiéndose entre series y
-              películas, y qué preguntas quedan abiertas de cara al próximo evento
-            </p>
-            <a href="#" class="panel__link">Leer más →</a>
-          </article>
-
-          <article class="panel">
-            <span class="tag">Saga</span>
-            <h3 class="panel__title">El reinicio del DCU, explicado</h3>
-            <p class="panel__body">
-              Qué queda del canon anterior, qué se reinicia por completo, y por
-              dónde conviene empezar si venís llegando ahora
-            </p>
-            <a href="#" class="panel__link">Leer más →</a>
-          </article>
-
-          <article class="panel">
-            <span class="tag">Cómic</span>
-            <h3 class="panel__title">Los arcos de cómic que toda adaptación debería leer</h3>
-            <p class="panel__body">
-              Una selección de historias en papel que explican mejor a ciertos
-              personajes que cualquiera de sus versiones en pantalla
-            </p>
-            <a href="#" class="panel__link">Leer más →</a>
-          </article>
-
-          <article class="panel">
-            <span class="tag">Análisis</span>
-            <h3 class="panel__title">Marvel vs. DC: dos formas distintas de contar el multiverso</h3>
-            <p class="panel__body">
-              Comparamos cómo cada editorial usa el concepto de universos paralelos
-              para renovar personajes sin perder continuidad del todo
-            </p>
-            <a href="#" class="panel__link">Leer más →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!--  4. TOP 10 JUEGOS  -->
-    <section class="page" id="top10" style="--accent: var(--void-purple)">
-      <div class="torn-edge"></div>
-      <div class="container">
-        <p class="eyebrow">Issue №4 — Ranking</p>
+        <p class="eyebrow">Issue №3 — Ranking</p>
         <h2 class="section-title">Top 10 Juegos</h2>
-        <p class="section-lede">El ranking de la redacción, revisado cada trimestre</p>
+        <p class="section-lede">Ranking de los 10 mejores juegos (segun nosotros)</p>
 
         <ol class="rank-list">
           <li class="rank-item">
             <span class="rank-item__num">1</span>
             <div>
-              <h3 class="rank-item__title">Un mundo abierto con exploración vertical</h3>
-              <p class="rank-item__blurb">Referencia obligada del año en diseño de niveles</p>
+              <h3 class="rank-item__title">The Legend of Zelda: Ocarina of Time (1998)</h3>
+              <p class="rank-item__blurb">Referencia obligada del año en diseño de niveles.</p>
             </div>
             <span class="rank-item__score">9.6</span>
           </li>
           <li class="rank-item">
             <span class="rank-item__num">2</span>
             <div>
-              <h3 class="rank-item__title">Un shooter táctico centrado en el trabajo en equipo</h3>
-              <p class="rank-item__blurb">La comunidad competitiva más activa del momento</p>
+              <h3 class="rank-item__title">Counter Strike 2</h3>
+              <p class="rank-item__blurb">La comunidad competitiva más activa del momento.</p>
             </div>
             <span class="rank-item__score">9.3</span>
           </li>
           <li class="rank-item">
             <span class="rank-item__num">3</span>
             <div>
-              <h3 class="rank-item__title">Una precuela narrativa con decisiones que pesan</h3>
-              <p class="rank-item__blurb">Historia sólida con múltiples finales reales</p>
+              <h3 class="rank-item__title">Batman: Arkham Origins</h3>
+              <p class="rank-item__blurb">Una precuela narrativa con decisiones que pesan.</p>
             </div>
             <span class="rank-item__score">9.1</span>
           </li>
           <li class="rank-item">
             <span class="rank-item__num">4</span>
             <div>
-              <h3 class="rank-item__title">Un roguelike con progresión adictiva</h3>
-              <p class="rank-item__blurb">Fácil de aprender, difícil de soltar</p>
+              <h3 class="rank-item__title">The Last of Us parte I</h3>
+              <p class="rank-item__blurb">chiquito, simple, me gusta</p>
             </div>
             <span class="rank-item__score">8.9</span>
           </li>
           <li class="rank-item">
             <span class="rank-item__num">5</span>
             <div>
-              <h3 class="rank-item__title">Un remake que mejora al original en casi todo</h3>
-              <p class="rank-item__blurb">Rediseño de combate muy bien recibido</p>
+              <h3 class="rank-item__title">Resident Evil 4:Remake</h3>
+              <p class="rank-item__blurb">Rediseño de combate muy bien recibido.</p>
             </div>
             <span class="rank-item__score">8.8</span>
           </li>
           <li class="rank-item">
             <span class="rank-item__num">6</span>
             <div>
-              <h3 class="rank-item__title">Un simulador de gestión sorprendentemente profundo</h3>
-              <p class="rank-item__blurb">Curva de aprendizaje alta, pero muy gratificante</p>
+              <h3 class="rank-item__title">S.T.A.L.K.E.R.</h3>
+              <p class="rank-item__blurb">Curva de aprendizaje alta, pero muy gratificante.</p>
             </div>
             <span class="rank-item__score">8.6</span>
           </li>
           <li class="rank-item">
             <span class="rank-item__num">7</span>
             <div>
-              <h3 class="rank-item__title">Un plataformas 2D con arte pixelado cuidado al detalle</h3>
-              <p class="rank-item__blurb">Diseño de niveles milimétrico</p>
+              <h3 class="rank-item__title">Super Meat Boy</h3>
+              <p class="rank-item__blurb">Diseño de niveles milimétrico.</p>
             </div>
             <span class="rank-item__score">8.5</span>
           </li>
           <li class="rank-item">
             <span class="rank-item__num">8</span>
             <div>
-              <h3 class="rank-item__title">Un cooperativo caótico pensado para jugar con amigos</h3>
-              <p class="rank-item__blurb">Ideal para sesiones cortas y divertidas</p>
+              <h3 class="rank-item__title">The Forest</h3>
+              <p class="rank-item__blurb">buena exploracion y jugar con amigos hasta TARDE.</p>
             </div>
             <span class="rank-item__score">8.3</span>
           </li>
           <li class="rank-item">
             <span class="rank-item__num">9</span>
             <div>
-              <h3 class="rank-item__title">Una aventura narrativa de ritmo pausado</h3>
-              <p class="rank-item__blurb">Más cerca del cine interactivo que del videojuego clásico</p>
+              <h3 class="rank-item__title">The Order 1886</h3>
+              <p class="rank-item__blurb">chiquita, simple, me gusta.</p>
             </div>
             <span class="rank-item__score">8.1</span>
           </li>
           <li class="rank-item">
             <span class="rank-item__num">10</span>
             <div>
-              <h3 class="rank-item__title">Un party game perfecto para reuniones</h3>
-              <p class="rank-item__blurb">Simple de explicar, imposible de dejar de jugar</p>
+              <h3 class="rank-item__title">Spiderman Shattered Dimensions</h3>
+              <p class="rank-item__blurb">una poronga la verdad.</p>
             </div>
             <span class="rank-item__score">7.9</span>
           </li>
@@ -382,13 +331,13 @@
       </div>
     </section>
 
-    <!--  5. CALENDARIO  -->
-    <section class="page" id="calendario" style="--accent: var(--blue-616)">
+    
+    <section class="page" id="calendario" style="--accent: var(--void-purple)">
       <div class="torn-edge"></div>
       <div class="container">
-        <p class="eyebrow">Issue №5 — Calendario</p>
+        <p class="eyebrow">Issue №4 — Calendario</p>
         <h2 class="section-title">Calendario de lanzamientos</h2>
-        <p class="section-lede">Próximos estrenos de juegos, cine, series y cómics</p>
+        <p class="section-lede">Próximos estrenos de juegos, cine, series y cómics.</p>
 
         <div class="calendar-grid">
           <div class="cal-card" data-release-date="2026-08-01">
@@ -419,215 +368,56 @@
       </div>
     </section>
 
-    <!--  6. GUÍAS  -->
-    <section class="page" id="guias" style="--accent: var(--crimson)">
+  
+    <section class="page" id="guias" style="--accent: var(--blue-616)">
       <div class="torn-edge"></div>
       <div class="container">
-        <p class="eyebrow">Issue №6 — Guías</p>
+        <p class="eyebrow">Issue №5 — Guías</p>
         <h2 class="section-title">Guías</h2>
-        <p class="section-lede">Para empezar sin perderse, sin importar por dónde entres</p>
+        <p class="section-lede">Para empezar sin perderse, sin importar por dónde entres.</p>
 
         <div class="panel-grid">
           <article class="panel">
             <span class="tag">Orden de visionado</span>
             <h3 class="panel__title">Cómo ver el MCU sin perderte en las líneas temporales</h3>
-            <p class="panel__body">Orden cronológico vs. orden de estreno, y cuándo conviene usar cada uno</p>
+            <p class="panel__body">Orden cronológico vs. orden de estreno, y cuándo conviene usar cada uno.</p>
             <a href="#" class="panel__link">Ver guía →</a>
           </article>
 
           <article class="panel">
             <span class="tag">Orden de visionado</span>
             <h3 class="panel__title">Guía de entrada al DCU reiniciado</h3>
-            <p class="panel__body">Qué mirar primero y qué es opcional según cuánto tiempo tengas</p>
+            <p class="panel__body">Qué mirar primero y qué es opcional según cuánto tiempo tengas.</p>
             <a href="#" class="panel__link">Ver guía →</a>
           </article>
 
           <article class="panel">
             <span class="tag">Walkthrough</span>
             <h3 class="panel__title">Cómo no perderse ningún coleccionable del último lanzamiento</h3>
-            <p class="panel__body">Mapa de zonas y el orden más eficiente para el 100%</p>
+            <p class="panel__body">Mapa de zonas y el orden más eficiente para el 100%.</p>
             <a href="#" class="panel__link">Ver guía →</a>
           </article>
 
           <article class="panel">
             <span class="tag">Lectura</span>
             <h3 class="panel__title">Por dónde empezar a leer cómics si nunca leíste uno</h3>
-            <p class="panel__body">Arcos autoconclusivos que no requieren años de contexto previo</p>
+            <p class="panel__body">Arcos autoconclusivos que no requieren años de contexto previo.</p>
             <a href="#" class="panel__link">Ver guía →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!--  7. WIKI / PERSONAJES  -->
-    <section class="page" id="wiki" style="--accent: var(--pop-yellow)">
+    
+    <section class="page" id="wiki" style="--accent: var(--crimson)">
       <div class="torn-edge"></div>
       <div class="container">
-        <p class="eyebrow">Issue №7 — Wiki</p>
+        <p class="eyebrow">Issue №6 — Wiki</p>
         <h2 class="section-title">Wiki / Personajes</h2>
-        <p class="section-lede">Fichas rápidas, sin spoilers de arcos recientes</p>
+        <p class="section-lede">Fichas rápidas, sin spoilers de arcos recientes.</p>
 
-        <details class="wiki-entry">
-          <summary>Héroe con doble identidad y base en una gran ciudad</summary>
-          <div class="wiki-entry__body">
-            <p>
-              Uno de los personajes más adaptados a otros medios, conocido por
-              equilibrar una vida civil discreta con una identidad heroica activa
-              durante la noche.
-            </p>
-            <div class="wiki-entry__tags">
-              <span class="tag">Marvel</span>
-              <span class="tag">Origen: cómic</span>
-            </div>
-          </div>
-        </details>
-
-        <details class="wiki-entry">
-          <summary>Detective urbano sin poderes sobrehumanos</summary>
-          <div class="wiki-entry__body">
-            <p>
-              Basa su ventaja en el entrenamiento físico, los recursos económicos
-              y una red de aliados que fue creciendo a lo largo de décadas de
-              historias
-            </p>
-            <div class="wiki-entry__tags">
-              <span class="tag">DC</span>
-              <span class="tag">Origen: cómic</span>
-            </div>
-          </div>
-        </details>
-
-        <details class="wiki-entry">
-          <summary>Protagonista silencioso de una saga de mundo abierto</summary>
-          <div class="wiki-entry__body">
-            <p>
-              Su desarrollo se cuenta casi sin diálogo, apoyándose en el diseño de
-              nivel y la dirección de arte para transmitir el arco emocional
-            </p>
-            <div class="wiki-entry__tags">
-              <span class="tag">Videojuegos</span>
-              <span class="tag">Origen: juego</span>
-            </div>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <!--  8. COMUNIDAD  -->
-    <section class="page" id="comunidad" style="--accent: var(--void-purple)">
-      <div class="torn-edge"></div>
-      <div class="container">
-        <p class="eyebrow">Issue №8 — Comunidad</p>
-        <h2 class="section-title">Comunidad</h2>
-        <p class="section-lede">
-          Dejá tu comentario, por ahora se guarda solo en esta pestaña — cuando
-          conectemos la base de datos, va a quedar guardado de verdad
-        </p>
-
-        <div class="community-layout">
-          <form class="community-form" data-community-form novalidate>
-            <div class="field">
-              <label for="comentario-nombre">Nombre</label>
-              <input type="text" id="comentario-nombre" name="nombre" placeholder="Tu nombre o alias" />
-              <small id="error-nombre"></small>
-            </div>
-
-            <div class="field">
-              <label for="comentario-categoria">Categoría</label>
-              <select id="comentario-categoria" name="categoria">
-                <option value="Juegos">Juegos</option>
-                <option value="Marvel">Marvel</option>
-                <option value="DC">DC</option>
-                <option value="General">General</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="comentario-mensaje">Comentario</label>
-              <textarea id="comentario-mensaje" name="mensaje" rows="4" placeholder="¿Qué opinás?"></textarea>
-              <small id="error-mensaje"></small>
-            </div>
-
-            <button type="submit" class="btn">Publicar comentario</button>
-          </form>
-
-          <ul class="comment-list" data-comment-list>
-            <li class="comment">
-              <div class="comment__meta"><span>Uli_Ferrari · General</span><span>hace 2 días</span></div>
-              <p>Bienvenidos a Geek Omniverse, este va a ser el punto de encuentro de todo el multiverso.</p>
-            </li>
-            <li class="comment">
-              <div class="comment__meta"><span>LucasDP · Juegos</span><span>hace 1 día</span></div>
-              <p>Alguien más está esperando el próximo lanzamiento de la sección Calendario?</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!--  9. TRIVIA  -->
-    <section class="page" id="trivia" style="--accent: var(--blue-616)">
-      <div class="torn-edge"></div>
-      <div class="container">
-        <p class="eyebrow">Issue №9 — Trivia</p>
-        <h2 class="section-title">Trivia</h2>
-        <p class="section-lede">Cuatro preguntas para medir cuánto sabés de la cultura geek</p>
-
-        <div class="trivia-box" data-trivia>
-          <div data-trivia-body>
-            <p class="trivia-box__progress"></p>
-            <h3 class="trivia-box__question"></h3>
-            <div class="trivia-options"></div>
-            <p class="trivia-box__feedback"></p>
-            <button type="button" class="btn" data-trivia-next hidden>Siguiente →</button>
-          </div>
-          <div class="trivia-box__result" hidden></div>
-        </div>
-      </div>
-    </section>
+    
+    
   </main>
-
-  <!--  FOOTER  -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h3>Contenido</h3>
-          <ul>
-            <li><a href="#noticias">Noticias</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#comics-cine">Cómics &amp; Cine</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Rankings</h3>
-          <ul>
-            <li><a href="#top10">Top 10 Juegos</a></li>
-            <li><a href="#calendario">Calendario</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Aprender</h3>
-          <ul>
-            <li><a href="#guias">Guías</a></li>
-            <li><a href="#wiki">Wiki / Personajes</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Comunidad</h3>
-          <ul>
-            <li><a href="#comunidad">Comunidad</a></li>
-            <li><a href="#trivia">Trivia</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="site-footer__bottom">
-        <span>© 2026 Geek Omniverse — Lucas Del Pino &amp; Ulises Ferrari</span>
-        <span>Fase 1: Frontend estático</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
