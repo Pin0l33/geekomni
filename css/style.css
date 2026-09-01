@@ -1,24 +1,24 @@
 :root {
-  
+ 
   --paper: #ede6d3;          
   --paper-raise: #f7f3e6;    
   --ink: #16151a;            
   --ink-soft: rgba(22, 21, 26, 0.68);
   --line: rgba(22, 21, 26, 0.16);
 
-  --blue-616: #22389e;      
-  --crimson: #c62839;       
+  --blue-616: #22389e;       
+  --crimson: #c62839;        
   --pop-yellow: #d99a06;     
   --void-purple: #4a2e7a;    
 
   --white: #fbf9f2;
 
-  
+  /* Tipografía */
   --font-display: "Anton", "Arial Narrow", sans-serif;
   --font-body: "Source Serif 4", Georgia, serif;
   --font-mono: "JetBrains Mono", "Courier New", monospace;
 
- 
+  /* Layout */
   --max-width: 1180px;
   --border-w: 3px;
   --gutter: clamp(1.25rem, 4vw, 3rem);
@@ -26,7 +26,8 @@
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-
+/* ---------- 2. Reset ---------- */
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -84,7 +85,7 @@ button {
   cursor: pointer;
 }
 
-
+/* Accesibilidad: foco visible siempre, movimiento reducido respetado */
 :focus-visible {
   outline: 3px solid var(--ink);
   outline-offset: 3px;
@@ -102,7 +103,7 @@ button {
   }
 }
 
-
+/* ---------- 3. Utilidades ---------- */
 .container {
   max-width: var(--max-width);
   margin-inline: auto;
@@ -185,7 +186,7 @@ button {
   color: var(--paper-raise);
 }
 
-
+/* ---------- 4. Header / navegación ---------- */
 .site-header {
   position: sticky;
   top: 0;
@@ -341,7 +342,7 @@ button {
   background: var(--paper);
 }
 
-
+/* ---------- 5. Hero ---------- */
 .hero {
   position: relative;
   overflow: hidden;
@@ -353,7 +354,7 @@ button {
 }
 
 .hero::before {
-  
+  /* ráfaga tipo "impacto" de cómic, dibujada con conic-gradient */
   content: "";
   position: absolute;
   inset: -20%;
@@ -363,4 +364,49 @@ button {
     transparent 4deg 12deg
   );
   z-index: -2;
+}
+
+.hero::after {
+  /* trama de semitono */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--paper) 1px, transparent 1.5px);
+  background-size: 14px 14px;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+.hero__kicker {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--pop-yellow);
+  margin-bottom: 1.25rem;
+}
+
+.hero__title {
+  font-size: clamp(2.6rem, 9vw, 5.5rem);
+  color: var(--paper);
+  text-shadow: 0.09em 0.09em 0 var(--crimson), 0.18em 0.18em 0 var(--blue-616);
+  margin-inline: auto;
+  max-width: 16ch;
+}
+
+.hero__sub {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.15rem;
+  max-width: 52ch;
+  margin: 1.75rem auto 0;
+  color: rgba(251, 249, 242, 0.82);
+}
+
+.hero__actions {
+  margin-top: 2.25rem;
+  display: flex;
+  gap: 0.9rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
