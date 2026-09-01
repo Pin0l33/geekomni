@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews · Geek Omniverse</title>
+  <meta
+    name="description"
+    content="Geek Omniverse: noticias, reviews, rankings, guías y comunidad sobre videojuegos, cómics de Marvel y DC, los universos MCU/DCU, y anime/manga."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="reviews">
+  <a class="sr-only" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a href="index.html" class="logo">GEEK<span>OMNI</span>VERSE</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
+        <ul class="primary-nav__list">
+          <li><a class="nav-link" href="noticias.html">Noticias</a></li>
+          <li><a class="nav-link" href="reviews.html">Reviews</a></li>
+          <li class="nav-group">
+            <button class="nav-group__trigger" aria-expanded="false">Best Of</button>
+            <div class="nav-group__menu">
+              <a href="top10.html">Top 10 Juegos</a>
+              <a href="calendario.html">Calendario</a>
+            </div>
+          </li>
+          <li class="nav-group">
+            <button class="nav-group__trigger" aria-expanded="false">Guías &amp; Wiki</button>
+            <div class="nav-group__menu">
+              <a href="guias.html">Guías</a>
+              <a href="wiki.html">Wiki / Personajes</a>
+            </div>
+          </li>
+          <li class="nav-group">
+            <button class="nav-group__trigger" aria-expanded="false">Entretenimiento</button>
+            <div class="nav-group__menu">
+              <a href="comics-cine.html">Cómics &amp; Cine</a>
+              <a href="anime-manga.html">Anime &amp; Manga</a>
+            </div>
+          </li>
+          <li class="nav-group">
+            <button class="nav-group__trigger" aria-expanded="false">Comunidad</button>
+            <div class="nav-group__menu">
+              <a href="comunidad.html">Comunidad</a>
+              <a href="trivia.html">Trivia</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page" id="reviews" style="--accent: var(--crimson)">
+      <div class="torn-edge"></div>
+      <div class="container">
+        <p class="eyebrow">Issue №2 — Reviews</p>
+        <h2 class="section-title">Reviews</h2>
+        <p class="section-lede">Análisis sin spoilers grandes, con nota y veredicto rápido.</p>
+
+        <div class="panel-grid">
+          <article class="panel review-panel">
+            <div class="stamp"><span class="stamp__score">8.5</span><span class="stamp__max">/10</span></div>
+            <span class="tag">Videojuego</span>
+            <h3 class="panel__title">Un mundo abierto que premia la exploración lenta</h3>
+            <p class="panel__body">
+              La curva de dificultad está bien pensada y el diseño de niveles invita
+              a desviarse del camino principal todo el tiempo.
+            </p>
+            <div class="review-lists">
+              <div>
+                <p>A favor</p>
+                <ul><li>Dirección de arte</li><li>Banda sonora</li></ul>
+              </div>
+              <div>
+                <p>En contra</p>
+                <ul><li>Rendimiento irregular</li></ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel review-panel">
+            <div class="stamp"><span class="stamp__score">7</span><span class="stamp__max">/10</span></div>
+            <span class="tag">MCU</span>
+            <h3 class="panel__title">Entretenida, aunque previsible en su segundo acto</h3>
+            <p class="panel__body">
+              Las escenas de acción están bien coreografiadas, pero el guion se
+              apoya demasiado en referencias a entregas anteriores.
+            </p>
+            <div class="review-lists">
+              <div>
+                <p>A favor</p>
+                <ul><li>Ritmo del tercer acto</li><li>Nuevo villano</li></ul>
+              </div>
+              <div>
+                <p>En contra</p>
+                <ul><li>Tramas secundarias flojas</li></ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel review-panel">
+            <div class="stamp"><span class="stamp__score">9</span><span class="stamp__max">/10</span></div>
+            <span class="tag">DCU</span>
+            <h3 class="panel__title">Un tono propio que se anima a arriesgar</h3>
+            <p class="panel__body">
+              Se aleja del estilo de entregas pasadas y construye una identidad
+              visual coherente de principio a fin.
+            </p>
+            <div class="review-lists">
+              <div>
+                <p>A favor</p>
+                <ul><li>Dirección de fotografía</li><li>Elenco</li></ul>
+              </div>
+              <div>
+                <p>En contra</p>
+                <ul><li>Dura casi 3 horas</li></ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Portal</h3>
+          <ul>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Best Of</h3>
+          <ul>
+            <li><a href="top10.html">Top 10 Juegos</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Guías &amp; Wiki</h3>
+          <ul>
+            <li><a href="guias.html">Guías</a></li>
+            <li><a href="wiki.html">Wiki / Personajes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Entretenimiento</h3>
+          <ul>
+            <li><a href="comics-cine.html">Cómics &amp; Cine</a></li>
+            <li><a href="anime-manga.html">Anime &amp; Manga</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Comunidad</h3>
+          <ul>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="trivia.html">Trivia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 Geek Omniverse — Lucas Del Pino &amp; Ulises Ferrari</span>
+        <span>Fase 1: Frontend estático</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

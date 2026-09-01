@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geek Omniverse — Videojuegos, Marvel y DC en un solo portal</title>
+  <meta
+    name="description"
+    content="Geek Omniverse: noticias, reviews, rankings, guías y comunidad sobre videojuegos, cómics de Marvel y DC, los universos MCU/DCU, y anime/manga."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="index">
+  <a class="sr-only" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a href="index.html" class="logo">GEEK<span>OMNI</span>VERSE</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
+        <ul class="primary-nav__list">
+          <li><a class="nav-link" href="noticias.html">Noticias</a></li>
+          <li><a class="nav-link" href="reviews.html">Reviews</a></li>
+          <li class="nav-group">
+            <button class="nav-group__trigger" aria-expanded="false">Best Of</button>
+            <div class="nav-group__menu">
+              <a href="top10.html">Top 10 Juegos</a>
+              <a href="calendario.html">Calendario</a>
+            </div>
+          </li>
+          <li class="nav-group">
+            <button class="nav-group__trigger" aria-expanded="false">Guías &amp; Wiki</button>
+            <div class="nav-group__menu">
+              <a href="guias.html">Guías</a>
+              <a href="wiki.html">Wiki / Personajes</a>
+            </div>
+          </li>
+          <li class="nav-group">
+            <button class="nav-group__trigger" aria-expanded="false">Entretenimiento</button>
+            <div class="nav-group__menu">
+              <a href="comics-cine.html">Cómics &amp; Cine</a>
+              <a href="anime-manga.html">Anime &amp; Manga</a>
+            </div>
+          </li>
+          <li class="nav-group">
+            <button class="nav-group__trigger" aria-expanded="false">Comunidad</button>
+            <div class="nav-group__menu">
+              <a href="comunidad.html">Comunidad</a>
+              <a href="trivia.html">Trivia</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <p class="hero__kicker">Issue №0 — Portada</p>
+    <h1 class="hero__title">Todo el multiverso geek, en un solo portal</h1>
+    <p class="hero__sub">
+      Videojuegos, cómics de Marvel y DC, los universos MCU/DCU, y anime/manga:
+      noticias, reviews, rankings, guías y una comunidad para discutirlo todo.
+    </p>
+    <div class="hero__actions">
+      <a href="noticias.html" class="btn">Ver noticias</a>
+      <a href="trivia.html" class="btn btn--ghost">Jugar trivia</a>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="page" id="portada">
+      <div class="torn-edge torn-edge--ink"></div>
+      <div class="container">
+        <p class="eyebrow">Índice</p>
+        <h2 class="section-title">Elegí tu dimensión</h2>
+        <p class="section-lede">Cada sección es un "issue" propio del portal — entrá a la que quieras.</p>
+
+        <div class="panel-grid">
+          <a class="panel" href="noticias.html" style="--accent: var(--blue-616); text-decoration:none;">
+            <span class="panel__issue">№1</span>
+            <h3 class="panel__title">Noticias</h3>
+            <p class="panel__body">Lo último del multiverso, actualizado por la redacción.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+          <a class="panel" href="reviews.html" style="--accent: var(--crimson); text-decoration:none;">
+            <span class="panel__issue">№2</span>
+            <h3 class="panel__title">Reviews</h3>
+            <p class="panel__body">Análisis con nota y veredicto rápido, sin spoilers grandes.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+          <a class="panel" href="top10.html" style="--accent: var(--pop-yellow); text-decoration:none;">
+            <span class="panel__issue">№3</span>
+            <h3 class="panel__title">Top 10 Juegos</h3>
+            <p class="panel__body">El ranking de la redacción, revisado cada trimestre.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+          <a class="panel" href="calendario.html" style="--accent: var(--void-purple); text-decoration:none;">
+            <span class="panel__issue">№4</span>
+            <h3 class="panel__title">Calendario</h3>
+            <p class="panel__body">Próximos estrenos de juegos, cine, series y cómics.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+          <a class="panel" href="guias.html" style="--accent: var(--blue-616); text-decoration:none;">
+            <span class="panel__issue">№5</span>
+            <h3 class="panel__title">Guías</h3>
+            <p class="panel__body">Para empezar sin perderte, sin importar por dónde entres.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+          <a class="panel" href="wiki.html" style="--accent: var(--crimson); text-decoration:none;">
+            <span class="panel__issue">№6</span>
+            <h3 class="panel__title">Wiki / Personajes</h3>
+            <p class="panel__body">Fichas rápidas de personajes, sin spoilers recientes.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+          <a class="panel" href="comics-cine.html" style="--accent: var(--pop-yellow); text-decoration:none;">
+            <span class="panel__issue">№7</span>
+            <h3 class="panel__title">Cómics & Cine</h3>
+            <p class="panel__body">Marvel y DC, en papel y en pantalla, con contexto de saga.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+          <a class="panel" href="anime-manga.html" style="--accent: var(--void-purple); text-decoration:none;">
+            <span class="panel__issue">№8</span>
+            <h3 class="panel__title">Anime & Manga</h3>
+            <p class="panel__body">Series, tomos y todo lo que conecta lo geek con Japón.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+          <a class="panel" href="comunidad.html" style="--accent: var(--blue-616); text-decoration:none;">
+            <span class="panel__issue">№9</span>
+            <h3 class="panel__title">Comunidad</h3>
+            <p class="panel__body">Dejá tu comentario y sumate a la discusión.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+          <a class="panel" href="trivia.html" style="--accent: var(--crimson); text-decoration:none;">
+            <span class="panel__issue">№10</span>
+            <h3 class="panel__title">Trivia</h3>
+            <p class="panel__body">Cuatro preguntas para medir cuánto sabés del multiverso.</p>
+            <span class="panel__link">Entrar →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Portal</h3>
+          <ul>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Best Of</h3>
+          <ul>
+            <li><a href="top10.html">Top 10 Juegos</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Guías &amp; Wiki</h3>
+          <ul>
+            <li><a href="guias.html">Guías</a></li>
+            <li><a href="wiki.html">Wiki / Personajes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Entretenimiento</h3>
+          <ul>
+            <li><a href="comics-cine.html">Cómics &amp; Cine</a></li>
+            <li><a href="anime-manga.html">Anime &amp; Manga</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Comunidad</h3>
+          <ul>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="trivia.html">Trivia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 Geek Omniverse — Lucas Del Pino &amp; Ulises Ferrari</span>
+        <span>Fase 1: Frontend estático</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
