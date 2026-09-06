@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,10 +24,14 @@
     <div class="site-header__bar">
       <a href="index.html" class="logo">GEEK<span>OMNI</span>VERSE</a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
-        <span></span>
-        <span class="sr-only">Abrir menú</span>
-      </button>
+      <div class="header-actions">
+        <div class="auth-area" data-auth-area></div>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+          <span></span>
+          <span class="sr-only">Abrir menú</span>
+        </button>
+      </div>
 
       <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
         <ul class="primary-nav__list">
@@ -143,6 +148,39 @@
             <p class="panel__body">
               Se mostró un adelanto con estilo visual inspirado directamente en el
               cómic original, algo poco común en adaptaciones recientes.
+            </p>
+            <a href="#" class="panel__link">Leer más →</a>
+          </article>
+
+          <article class="panel" data-category="juegos">
+            <span class="tag">Juegos</span>
+            <h3 class="panel__title">Revelan requisitos mínimos para la próxima expansión</h3>
+            <p class="panel__meta">28 jul 2026</p>
+            <p class="panel__body">
+              El estudio compartió los requisitos técnicos oficiales, generando
+              dudas sobre el rendimiento en consolas de generación anterior.
+            </p>
+            <a href="#" class="panel__link">Leer más →</a>
+          </article>
+
+          <article class="panel" data-category="marvel">
+            <span class="tag">Marvel</span>
+            <h3 class="panel__title">Se suma un nuevo guionista al equipo creativo</h3>
+            <p class="panel__meta">25 jul 2026</p>
+            <p class="panel__body">
+              La editorial confirmó el fichaje para encabezar uno de los títulos
+              mensuales más seguidos de los últimos años.
+            </p>
+            <a href="#" class="panel__link">Leer más →</a>
+          </article>
+
+          <article class="panel" data-category="dc">
+            <span class="tag">DC</span>
+            <h3 class="panel__title">Confirman fecha para el evento editorial del año</h3>
+            <p class="panel__meta">22 jul 2026</p>
+            <p class="panel__body">
+              El crossover reunirá a varios títulos mensuales en una sola línea
+              argumental que promete tener consecuencias permanentes.
             </p>
             <a href="#" class="panel__link">Leer más →</a>
           </article>

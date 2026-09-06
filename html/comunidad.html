@@ -4,7 +4,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top 10 Juegos · Geek Omniverse</title>
+  <title>Comunidad · Geek Omniverse</title>
   <meta
     name="description"
     content="Geek Omniverse: noticias, reviews, rankings, guías y comunidad sobre videojuegos, cómics de Marvel y DC, los universos MCU/DCU, y anime/manga."
@@ -17,7 +17,7 @@
   />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body data-page="top10">
+<body data-page="comunidad">
   <a class="sr-only" href="#main">Saltar al contenido principal</a>
 
   <header class="site-header">
@@ -71,95 +71,70 @@
   </header>
 
   <main id="main">
-    <section class="page" id="top10" style="--accent: var(--pop-yellow)">
+    <section class="page" id="comunidad" style="--accent: var(--blue-616)">
       <div class="torn-edge"></div>
       <div class="container">
-        <p class="eyebrow">Issue №3 — Ranking</p>
-        <h2 class="section-title">Top 10 Juegos</h2>
-        <p class="section-lede">El ranking de la redacción, revisado cada trimestre.</p>
+        <p class="eyebrow">Issue №9 — Comunidad</p>
+        <h2 class="section-title">Comunidad</h2>
+        <p class="section-lede">
+          Dejá tu comentario. Por ahora se guarda solo en esta pestaña — cuando
+          conectemos la base de datos, va a quedar guardado de verdad.
+        </p>
 
-        <ol class="rank-list">
-          <li class="rank-item">
-            <span class="rank-item__num">1</span>
-            <div>
-              <h3 class="rank-item__title">Un mundo abierto con exploración vertical</h3>
-              <p class="rank-item__blurb">Referencia obligada del año en diseño de niveles.</p>
+        <div class="auth-gate" data-community-gate style="--accent: var(--void-purple)">
+          <p>Necesitás iniciar sesión para ver y participar de la comunidad.</p>
+          <div class="hero__actions">
+            <a href="login.html" class="btn">Iniciar sesión</a>
+            <a href="registro.html" class="btn btn--ghost">Crear cuenta</a>
+          </div>
+        </div>
+
+        <div class="community-layout" hidden>
+          <form class="community-form" data-community-form novalidate>
+            <div class="field">
+              <label for="comentario-nombre">Nombre</label>
+              <input type="text" id="comentario-nombre" name="nombre" placeholder="Tu nombre o alias" />
+              <small id="error-nombre"></small>
             </div>
-            <span class="rank-item__score">9.6</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">2</span>
-            <div>
-              <h3 class="rank-item__title">Un shooter táctico centrado en el trabajo en equipo</h3>
-              <p class="rank-item__blurb">La comunidad competitiva más activa del momento.</p>
+
+            <div class="field">
+              <label for="comentario-categoria">Categoría</label>
+              <select id="comentario-categoria" name="categoria">
+                <option value="Juegos">Juegos</option>
+                <option value="Marvel">Marvel</option>
+                <option value="DC">DC</option>
+                <option value="General">General</option>
+              </select>
             </div>
-            <span class="rank-item__score">9.3</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">3</span>
-            <div>
-              <h3 class="rank-item__title">Una precuela narrativa con decisiones que pesan</h3>
-              <p class="rank-item__blurb">Historia sólida con múltiples finales reales.</p>
+
+            <div class="field">
+              <label for="comentario-mensaje">Comentario</label>
+              <textarea id="comentario-mensaje" name="mensaje" rows="4" placeholder="¿Qué opinás?"></textarea>
+              <small id="error-mensaje"></small>
             </div>
-            <span class="rank-item__score">9.1</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">4</span>
-            <div>
-              <h3 class="rank-item__title">Un roguelike con progresión adictiva</h3>
-              <p class="rank-item__blurb">Fácil de aprender, difícil de soltar.</p>
-            </div>
-            <span class="rank-item__score">8.9</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">5</span>
-            <div>
-              <h3 class="rank-item__title">Un remake que mejora al original en casi todo</h3>
-              <p class="rank-item__blurb">Rediseño de combate muy bien recibido.</p>
-            </div>
-            <span class="rank-item__score">8.8</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">6</span>
-            <div>
-              <h3 class="rank-item__title">Un simulador de gestión sorprendentemente profundo</h3>
-              <p class="rank-item__blurb">Curva de aprendizaje alta, pero muy gratificante.</p>
-            </div>
-            <span class="rank-item__score">8.6</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">7</span>
-            <div>
-              <h3 class="rank-item__title">Un plataformas 2D con arte pixelado cuidado al detalle</h3>
-              <p class="rank-item__blurb">Diseño de niveles milimétrico.</p>
-            </div>
-            <span class="rank-item__score">8.5</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">8</span>
-            <div>
-              <h3 class="rank-item__title">Un cooperativo caótico pensado para jugar con amigos</h3>
-              <p class="rank-item__blurb">Ideal para sesiones cortas y divertidas.</p>
-            </div>
-            <span class="rank-item__score">8.3</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">9</span>
-            <div>
-              <h3 class="rank-item__title">Una aventura narrativa de ritmo pausado</h3>
-              <p class="rank-item__blurb">Más cerca del cine interactivo que del videojuego clásico.</p>
-            </div>
-            <span class="rank-item__score">8.1</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">10</span>
-            <div>
-              <h3 class="rank-item__title">Un party game perfecto para reuniones</h3>
-              <p class="rank-item__blurb">Simple de explicar, imposible de dejar de jugar.</p>
-            </div>
-            <span class="rank-item__score">7.9</span>
-          </li>
-        </ol>
+
+            <button type="submit" class="btn">Publicar comentario</button>
+          </form>
+
+          <ul class="comment-list" data-comment-list>
+            <li class="comment">
+              <div class="comment__meta"><span>Uli_Ferrari · General</span><span>hace 2 días</span></div>
+              <p>Bienvenidos a Geek Omniverse, este va a ser el punto de encuentro de todo el multiverso.</p>
+            </li>
+            <li class="comment">
+              <div class="comment__meta"><span>LucasDP · Juegos</span><span>hace 1 día</span></div>
+              <p>Alguien más está esperando el próximo lanzamiento de la sección Calendario?</p>
+            </li>
+            <li class="comment">
+              <div class="comment__meta"><span>Fan_Geek99 · DC</span><span>hace 5 horas</span></div>
+              <p>El nuevo arco editorial se ve prometedor, ojalá no lo apuren como el anterior.</p>
+            </li>
+            <li class="comment">
+              <div class="comment__meta"><span>MangaReader · Manga</span><span>hace 2 horas</span></div>
+              <p>El tomo final está increíble, cerró casi todas las tramas abiertas.</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>

@@ -4,7 +4,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top 10 Juegos · Geek Omniverse</title>
+  <title>Iniciar sesión · Geek Omniverse</title>
   <meta
     name="description"
     content="Geek Omniverse: noticias, reviews, rankings, guías y comunidad sobre videojuegos, cómics de Marvel y DC, los universos MCU/DCU, y anime/manga."
@@ -17,7 +17,7 @@
   />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body data-page="top10">
+<body data-page="login">
   <a class="sr-only" href="#main">Saltar al contenido principal</a>
 
   <header class="site-header">
@@ -71,95 +71,32 @@
   </header>
 
   <main id="main">
-    <section class="page" id="top10" style="--accent: var(--pop-yellow)">
-      <div class="torn-edge"></div>
+    <section class="page" id="login" style="--accent: var(--void-purple)">
+      <div class="torn-edge torn-edge--ink"></div>
       <div class="container">
-        <p class="eyebrow">Issue №3 — Ranking</p>
-        <h2 class="section-title">Top 10 Juegos</h2>
-        <p class="section-lede">El ranking de la redacción, revisado cada trimestre.</p>
+        <p class="eyebrow">Acceso</p>
+        <h2 class="section-title">Iniciar sesión</h2>
+        <p class="section-lede">Necesitás una cuenta para comentar en la Comunidad.</p>
 
-        <ol class="rank-list">
-          <li class="rank-item">
-            <span class="rank-item__num">1</span>
-            <div>
-              <h3 class="rank-item__title">Un mundo abierto con exploración vertical</h3>
-              <p class="rank-item__blurb">Referencia obligada del año en diseño de niveles.</p>
-            </div>
-            <span class="rank-item__score">9.6</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">2</span>
-            <div>
-              <h3 class="rank-item__title">Un shooter táctico centrado en el trabajo en equipo</h3>
-              <p class="rank-item__blurb">La comunidad competitiva más activa del momento.</p>
-            </div>
-            <span class="rank-item__score">9.3</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">3</span>
-            <div>
-              <h3 class="rank-item__title">Una precuela narrativa con decisiones que pesan</h3>
-              <p class="rank-item__blurb">Historia sólida con múltiples finales reales.</p>
-            </div>
-            <span class="rank-item__score">9.1</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">4</span>
-            <div>
-              <h3 class="rank-item__title">Un roguelike con progresión adictiva</h3>
-              <p class="rank-item__blurb">Fácil de aprender, difícil de soltar.</p>
-            </div>
-            <span class="rank-item__score">8.9</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">5</span>
-            <div>
-              <h3 class="rank-item__title">Un remake que mejora al original en casi todo</h3>
-              <p class="rank-item__blurb">Rediseño de combate muy bien recibido.</p>
-            </div>
-            <span class="rank-item__score">8.8</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">6</span>
-            <div>
-              <h3 class="rank-item__title">Un simulador de gestión sorprendentemente profundo</h3>
-              <p class="rank-item__blurb">Curva de aprendizaje alta, pero muy gratificante.</p>
-            </div>
-            <span class="rank-item__score">8.6</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">7</span>
-            <div>
-              <h3 class="rank-item__title">Un plataformas 2D con arte pixelado cuidado al detalle</h3>
-              <p class="rank-item__blurb">Diseño de niveles milimétrico.</p>
-            </div>
-            <span class="rank-item__score">8.5</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">8</span>
-            <div>
-              <h3 class="rank-item__title">Un cooperativo caótico pensado para jugar con amigos</h3>
-              <p class="rank-item__blurb">Ideal para sesiones cortas y divertidas.</p>
-            </div>
-            <span class="rank-item__score">8.3</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">9</span>
-            <div>
-              <h3 class="rank-item__title">Una aventura narrativa de ritmo pausado</h3>
-              <p class="rank-item__blurb">Más cerca del cine interactivo que del videojuego clásico.</p>
-            </div>
-            <span class="rank-item__score">8.1</span>
-          </li>
-          <li class="rank-item">
-            <span class="rank-item__num">10</span>
-            <div>
-              <h3 class="rank-item__title">Un party game perfecto para reuniones</h3>
-              <p class="rank-item__blurb">Simple de explicar, imposible de dejar de jugar.</p>
-            </div>
-            <span class="rank-item__score">7.9</span>
-          </li>
-        </ol>
+        <form class="community-form" style="max-width: 420px;" data-login-form novalidate>
+          <div class="field">
+            <label for="login-usuario">Usuario o email</label>
+            <input type="text" id="login-usuario" name="usuario" autocomplete="username" required />
+          </div>
+
+          <div class="field">
+            <label for="login-contrasena">Contraseña</label>
+            <input type="password" id="login-contrasena" name="contrasena" autocomplete="current-password" required />
+          </div>
+
+          <small data-login-error style="color: var(--crimson); font-family: var(--font-mono); font-size: 0.78rem;"></small>
+
+          <button type="submit" class="btn">Entrar</button>
+
+          <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft);">
+            ¿No tenés cuenta? <a href="registro.html" style="color: var(--ink);">Registrate acá</a>.
+          </p>
+        </form>
       </div>
     </section>
   </main>
