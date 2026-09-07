@@ -1,0 +1,10 @@
+body{margin:0;background:#001100;color:#d9ff00;font-family:Verdana}
+.site-header{background:#ff6600;padding:18px}.site-header__bar{display:flex;flex-wrap:wrap;justify-content:space-between}
+.logo{color:#0000ff;font-size:32px}.logo span{color:#00ff00}
+.primary-nav__list{display:flex;gap:4px;list-style:none;flex-wrap:wrap}.nav-link,.nav-group__trigger{background:#ff00ff;color:#ffff00;padding:11px;border:2px solid #00ffff;text-decoration:none}.nav-link:hover{background:#ffffff;color:#ff0000}
+.nav-group{position:relative}.nav-group__menu{display:none;position:absolute;background:#ff0000;padding:10px}.nav-group:hover .nav-group__menu{display:block}
+.container{width:86%;margin:40px auto}.section-title{font-size:48px;background:#00ffff;color:#ff0000}.section-lede{background:#7f00ff;color:#00ff00;padding:25px}
+.panel-grid,.review-lists{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.panel{background:#ff00aa;border:10px groove #00ff00;padding:25px}.panel__body{background:#0000ff;color:#ffea00;padding:15px}.stamp{background:#00ff00;color:#ff0000;padding:20px;transform:rotate(-5deg)}
+.tag{background:#ffff00;color:#000;padding:8px}.site-footer{background:#ff6600;color:#0000ff;padding:30px}
+
+.page{background-image:url("imagenes/imagen-absurda-3.svg");background-size:220px;background-repeat:repeat-y;background-position:right;}

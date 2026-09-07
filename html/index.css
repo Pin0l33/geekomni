@@ -1,0 +1,26 @@
+/* CSS DE INDEX - versión deliberadamente incompleta/desprolija */
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#fff3a6;color:#56205f}
+.site-header{background:#ff1744;border-bottom:12px dotted #00e5ff}
+.site-header__bar{padding:22px 4%;display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.logo{font-size:30px;font-weight:bold;color:#00ff66;text-decoration:underline}
+.logo span{color:#1500ff}
+.primary-nav__list{list-style:none;display:flex;gap:5px;flex-wrap:wrap;padding:0;margin:0}
+.nav-link,.nav-group__trigger{background:#00ff66;color:#7b0000;padding:13px 8px;border:4px solid #ff00c8;text-decoration:none;font-weight:bold}
+.nav-link:hover,.nav-group__trigger:hover{background:#ffea00;color:#001eff}
+.nav-group{position:relative}
+.nav-group__menu{display:none;position:absolute;background:#00e5ff;padding:10px;z-index:5}
+.nav-group:hover .nav-group__menu{display:block}
+.nav-group__menu a{display:block;color:#ff006e;padding:7px}
+.container{width:92%;margin:20px auto}
+.hero{background:#00e5ff;padding:35px;border:9px double #ff7a00;min-height:260px}
+.hero__title{font-size:58px;color:#ff006e;text-shadow:5px 5px #fff}
+.hero__sub{font-family:"Comic Sans MS",cursive;background:#7cff00;padding:18px}
+.panel,.review-panel{background:#ff9d00;border:8px ridge #4b00ff;padding:20px;margin:20px 0}
+.panel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
+.panel__body{background:#ff00c8;color:#001bff;padding:20px}
+.btn{background:#001bff;color:#ffea00;border:5px solid #ff00c8;padding:13px 20px}
+.site-footer{background:#39ff14;color:#ff006e;padding:35px}
+.site-footer__bottom{background:#ff1744;padding:15px}
+
+body{background-image:url("imagenes/imagen-absurda-1.svg");background-size:180px;}

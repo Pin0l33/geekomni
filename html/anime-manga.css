@@ -1,0 +1,5 @@
+body{margin:0;background:#ffe600;color:#12006b;font-family:Arial}
+.site-header{background:#ff0099;padding:20px}.site-header__bar{display:flex;justify-content:space-between;flex-wrap:wrap}.logo{color:#00ff00;font-size:31px}.logo span{color:#0000ff}
+.primary-nav__list{display:flex;list-style:none;gap:5px;flex-wrap:wrap}.nav-link,.nav-group__trigger{background:#00ffff;color:#ff0000;padding:12px;border:5px solid #ff00ff;text-decoration:none}.nav-link:hover{background:#000;color:#fff}
+.nav-group{position:relative}.nav-group__menu{display:none;position:absolute;background:#00ff00;padding:10px}.nav-group:hover .nav-group__menu{display:block}
+.container{width:90%;margin:30px auto}.section-title{font-size:46px;background:#ff0000;color:#ffff00;padding:15px}.section-lede{background:#0000ff;color:#00ff00;padding:20px}.panel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.panel{background:#ff8800;border:8px solid #00ffff;padding:18px}.panel__body{background:#ff00ff;color:#0000ff;padding:15px}.panel__title{color:#00ffff}.panel__link{color:#00ff00}.tag{background:#000;color:#fff}.site-footer{background:#ff0099;color:#00ffff;padding:30px}
