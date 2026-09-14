@@ -25,7 +25,7 @@ Portal web sobre cultura geek en su totalidad: videojuegos, cómics de Marvel y 
 - **Cómics & Cine (MCU/DCU)** — Sección dedicada a Marvel y DC
 - **Wiki / Personajes** — Fichas de personajes, villanos, líneas temporales
 - **Comunidad** — Comentarios y foro de discusión
-- **Trivia / Quizzes** — Contenido interactivo sobre el universo geek
+- **Trivia / Quizzes** — Contenido interactivo sobre el universo geek (Posiblemente si el tiempo acompaña)
 
 ##  Base de datos (fase futura)
 
