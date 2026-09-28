@@ -1,5 +1,0 @@
-body{margin:0;background:#00ffff;color:#5c005c;font-family:Arial}
-.site-header{background:#ffff00;padding:22px}.site-header__bar{display:flex;gap:20px;flex-wrap:wrap}.logo{font-size:30px;color:#ff0000}.logo span{color:#0000ff}
-.primary-nav__list{display:flex;list-style:none;gap:6px;flex-wrap:wrap}.nav-link,.nav-group__trigger{background:#ff00ff;color:#00ff00;padding:13px;border:3px solid #ff0000;text-decoration:none}.nav-link:hover{background:#111;color:#fff}
-.nav-group{position:relative}.nav-group__menu{display:none;position:absolute;background:#00ff00;padding:10px}.nav-group:hover .nav-group__menu{display:block}
-.container{width:88%;margin:30px auto}.section-title{font-size:45px;background:#ff0000;color:#00ffff;padding:15px}.section-lede{background:#7b00ff;color:#ffff00;padding:20px}.panel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.panel{background:#ff8800;border:8px solid #0000ff;padding:18px}.panel__body{background:#ff00ff;color:#001aff;padding:15px}.panel__link{color:#00ff00}.tag{background:#000;color:#ffff00;padding:7px}.site-footer{background:#ffff00;color:#ff0000;padding:30px}
