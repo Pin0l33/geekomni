@@ -28,7 +28,7 @@ CREATE TABLE contenido (
 CREATE TABLE comentarios (
     id_comentario INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
-    id_contenido INT DEFAULT NULL, -- Puede ser NULL si es un comentario general en "Comunidad"
+    id_contenido INT DEFAULT NULL, 
     categoria ENUM('juegos', 'marvel', 'dc', 'anime_manga', 'general') DEFAULT 'general',
     cuerpo TEXT NOT NULL,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -42,7 +42,7 @@ CREATE TABLE favoritos (
     id_usuario INT NOT NULL,
     id_contenido INT NOT NULL,
     fecha_guardado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(id_usuario, id_contenido), -- Evita que un usuario guarde lo mismo dos veces
+    UNIQUE(id_usuario, id_contenido), 
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     FOREIGN KEY (id_contenido) REFERENCES contenido(id_contenido) ON DELETE CASCADE
 );
@@ -54,7 +54,7 @@ CREATE TABLE calificaciones_usuarios (
     id_contenido INT NOT NULL,
     puntuacion TINYINT NOT NULL CHECK (puntuacion BETWEEN 1 AND 10),
     fecha_calificacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(id_usuario, id_contenido), -- Un usuario solo puede puntuar un contenido una vez
+    UNIQUE(id_usuario, id_contenido), 
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     FOREIGN KEY (id_contenido) REFERENCES contenido(id_contenido) ON DELETE CASCADE
 );
