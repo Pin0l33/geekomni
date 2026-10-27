@@ -1,29 +1,17 @@
 <?php
-
 session_start();
 
-if (!isset($_SESSION["id_usuario"])) {
-    die("No hay ningún usuario iniciado.");
+header("Content-Type: application/json; charset=utf-8");
+
+if (isset($_SESSION["id_usuario"])) {
+    echo json_encode([
+        "logueado" => true,
+        "id_usuario" => $_SESSION["id_usuario"],
+        "nombre_usuario" => $_SESSION["nombre_usuario"],
+        "email" => $_SESSION["email"] ?? ""
+    ]);
+} else {
+    echo json_encode([
+        "logueado" => false
+    ]);
 }
-
-
-echo "Usuario conectado: "
-    . htmlspecialchars($_SESSION["nombre_usuario"]);
-
-echo "<br>";
-
-echo "Email: "
-    . htmlspecialchars($_SESSION["email"]);
-
-echo "<br>";
-
-echo "ID de usuario: "
-    . htmlspecialchars($_SESSION["id_usuario"]);
-
-echo "<br>";
-
-echo "Rol: "
-    . htmlspecialchars($_SESSION["rol"]);
-
-?>
-

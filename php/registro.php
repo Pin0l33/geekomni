@@ -1,83 +1,56 @@
 <?php
+session_start();
+require_once __DIR__ . "/conexion.php";
 
-require_once "conexion.php";
-
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-
-
-    $usuario = trim($_POST["usuario"] ?? "");
-    $email = trim($_POST["email"] ?? "");
-    $contrasena = $_POST["contrasena"] ?? "";
-
-
-
-
-    if ($usuario === "" || $email === "" || $contrasena === "") {
-
-        die("Todos los campos son obligatorios.");
-
-    }
-
-
-
-
-    if (strlen($contrasena) < 6) {
-
-        die("La contraseña debe tener al menos 6 caracteres.");
-
-    }
-
-
-    
-
-    $sql = "SELECT id_usuario
-            FROM usuarios
-            WHERE nombre_usuario = :usuario
-            OR email = :email";
-
-    $consulta = $conexion->prepare($sql);
-
-    $consulta->execute([
-        ":usuario" => $usuario,
-        ":email" => $email
-    ]);
-
-
-    if ($consulta->fetch()) {
-
-        die("El nombre de usuario o email ya está registrado.");
-
-    }
-
-
-   
-
-    $password_hash = password_hash(
-        $contrasena,
-        PASSWORD_DEFAULT
-    );
-
-
-    
-
-    $sql = "INSERT INTO usuarios
-            (nombre_usuario, email, password_hash)
-            VALUES
-            (:usuario, :email, :password_hash)";
-
-    $consulta = $conexion->prepare($sql);
-
-    $consulta->execute([
-        ":usuario" => $usuario,
-        ":email" => $email,
-        ":password_hash" => $password_hash
-    ]);
-
-
-    echo "Usuario registrado correctamente.";
-
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: ../html/registro.html");
+    exit;
 }
 
-?>
+$nombre = trim($_POST["usuario"] ?? "");
+$email = trim($_POST["email"] ?? "");
+$password = $_POST["contrasena"] ?? "";
+
+if (
+    $nombre === "" ||
+    !filter_var($email, FILTER_VALIDATE_EMAIL) ||
+    strlen($password) < 8 ||
+    strlen($nombre) > 50
+) {
+    header("Location: ../html/registro.html?error=datos");
+    exit;
+}
+
+try {
+    $consulta = $pdo->prepare(
+        "SELECT id_usuario FROM usuarios
+         WHERE nombre_usuario = ? OR email = ? LIMIT 1"
+    );
+    $consulta->execute([$nombre, $email]);
+
+    if ($consulta->fetch()) {
+        header("Location: ../html/registro.html?error=existe");
+        exit;
+    }
+
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+
+    $insertar = $pdo->prepare(
+        "INSERT INTO usuarios (nombre_usuario, email, password_hash)
+         VALUES (?, ?, ?)"
+    );
+    $insertar->execute([$nombre, $email, $hash]);
+
+    session_regenerate_id(true);
+    $_SESSION["id_usuario"] = (int) $pdo->lastInsertId();
+    $_SESSION["nombre_usuario"] = $nombre;
+    $_SESSION["email"] = $email;
+
+    header("Location: ../html/index.html?registro=ok");
+    exit;
+
+} catch (PDOException $e) {
+    error_log($e->getMessage());
+    header("Location: ../html/registro.html?error=servidor");
+    exit;
+}

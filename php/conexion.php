@@ -1,26 +1,23 @@
 <?php
 
-$servidor = "localhost";
-$baseDatos = "geek_omniverse";
-$usuario = "root";
-$contrasena = "";
+$host = "localhost";
+$dbname = "geek_omniverse";
+$usuario = "phpmyadmin";
+$contrasena = "RedesInformaticas";
 
 try {
-    $conexion = new PDO(
-        "mysql:host=$servidor;dbname=$baseDatos;charset=utf8mb4",
+    $pdo = new PDO(
+        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
         $usuario,
-        $contrasena
+        $contrasena,
+        [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false
+        ]
     );
-
-    $conexion->setAttribute(
-        PDO::ATTR_ERRMODE,
-        PDO::ERRMODE_EXCEPTION
-    );
-
-    echo "Conexión exitosa con la base de datos.";
-
-} catch (PDOException $error) {
-    die("Error de conexión: " . $error->getMessage());
+} catch (PDOException $e) {
+    error_log($e->getMessage());
+    http_response_code(500);
+    exit("No se pudo conectar con la base de datos.");
 }
-
-?>

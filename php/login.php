@@ -1,61 +1,45 @@
 <?php
-
 session_start();
-
-require_once "conexion.php";
-
+require_once __DIR__ . "/conexion.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    die("Acceso no permitido.");
+    header("Location: ../html/login.html");
+    exit;
 }
-
 
 $usuario = trim($_POST["usuario"] ?? "");
-$contrasena = $_POST["contrasena"] ?? "";
+$password = $_POST["contrasena"] ?? "";
 
-
-if ($usuario === "" || $contrasena === "") {
-    die("Completá todos los campos.");
+if ($usuario === "" || $password === "") {
+    header("Location: ../html/login.html?error=datos");
+    exit;
 }
 
+try {
+    $consulta = $pdo->prepare(
+        "SELECT id_usuario, nombre_usuario, email, password_hash
+         FROM usuarios
+         WHERE nombre_usuario = ? OR email = ?
+         LIMIT 1"
+    );
+    $consulta->execute([$usuario, $usuario]);
+    $cuenta = $consulta->fetch();
 
-$sql = "SELECT id_usuario, nombre_usuario, email, password_hash, rol
-        FROM usuarios
-        WHERE nombre_usuario = :usuario
-        OR email = :usuario
-        LIMIT 1";
+    if (!$cuenta || !password_verify($password, $cuenta["password_hash"])) {
+        header("Location: ../html/login.html?error=credenciales");
+        exit;
+    }
 
-$consulta = $conexion->prepare($sql);
+    session_regenerate_id(true);
+    $_SESSION["id_usuario"] = (int) $cuenta["id_usuario"];
+    $_SESSION["nombre_usuario"] = $cuenta["nombre_usuario"];
+    $_SESSION["email"] = $cuenta["email"];
 
-$consulta->execute([
-    ":usuario" => $usuario
-]);
+    header("Location: ../html/index.html?login=ok");
+    exit;
 
-
-$usuarioEncontrado = $consulta->fetch(PDO::FETCH_ASSOC);
-
-
-if (!$usuarioEncontrado) {
-    die("El usuario o email no existe.");
+} catch (PDOException $e) {
+    error_log($e->getMessage());
+    header("Location: ../html/login.html?error=servidor");
+    exit;
 }
-
-
-if (!password_verify(
-    $contrasena,
-    $usuarioEncontrado["password_hash"]
-)) {
-    die("La contraseña es incorrecta.");
-}
-
-
-$_SESSION["id_usuario"] = $usuarioEncontrado["id_usuario"];
-$_SESSION["nombre_usuario"] = $usuarioEncontrado["nombre_usuario"];
-$_SESSION["email"] = $usuarioEncontrado["email"];
-$_SESSION["rol"] = $usuarioEncontrado["rol"];
-
-
-
-echo "Inicio de sesión exitoso. Bienvenido "
-    . htmlspecialchars($usuarioEncontrado["nombre_usuario"]);
-
-?>
