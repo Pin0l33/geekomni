@@ -16,8 +16,14 @@ try {
             PDO::ATTR_EMULATE_PREPARES => false
         ]
     );
+
 } catch (PDOException $e) {
+
     error_log($e->getMessage());
+
     http_response_code(500);
-    exit("No se pudo conectar con la base de datos.");
+
+    exit(
+        "No se pudo conectar con la base de datos. Revisá php/conexion.php."
+    );
 }

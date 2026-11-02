@@ -1,45 +1,71 @@
 <?php
+
 require_once __DIR__ . "/conexion.php";
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
 
 header("Content-Type: application/json; charset=utf-8");
 
-$id_contenido = filter_input(
-    INPUT_GET,
-    "id_contenido",
-    FILTER_VALIDATE_INT
-);
 $categoria = trim($_GET["categoria"] ?? "");
 
-if (!$id_contenido || $id_contenido < 1 || $categoria === "") {
-    http_response_code(400);
-    echo json_encode(["error" => "Falta indicar el contenido y la categoría."]);
-    exit;
-}
+$categorias = [
+    "juegos",
+    "marvel",
+    "dc",
+    "anime_manga",
+    "general"
+];
 
 try {
-    $sql = "SELECT c.id_comentario, c.id_usuario,
-                   c.id_contenido, c.categoria, c.cuerpo,
-                   c.fecha_creacion, u.nombre_usuario
+
+    if (
+        $categoria !== "" &&
+        !in_array($categoria, $categorias, true)
+    ) {
+        http_response_code(400);
+
+        echo json_encode([
+            "error" => "Categoría no válida."
+        ]);
+
+        exit;
+    }
+
+    $sql = "SELECT
+                c.id_comentario,
+                c.categoria,
+                c.cuerpo,
+                c.fecha_creacion,
+                u.nombre_usuario
             FROM comentarios c
             INNER JOIN usuarios u
-                ON c.id_usuario = u.id_usuario
-            WHERE c.id_contenido = :contenido
-              AND c.categoria = :categoria
-            ORDER BY c.fecha_creacion DESC";
+                ON c.id_usuario = u.id_usuario";
 
-    $consulta = $pdo->prepare($sql);
-    $consulta->execute([
-        ":contenido" => $id_contenido,
-        ":categoria" => $categoria
-    ]);
+    $params = [];
+
+    if ($categoria !== "") {
+        $sql .= " WHERE c.categoria = ?";
+        $params[] = $categoria;
+    }
+
+    $sql .= " ORDER BY c.fecha_creacion DESC LIMIT 100";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($params);
 
     echo json_encode(
-        $consulta->fetchAll(),
+        $stmt->fetchAll(),
         JSON_UNESCAPED_UNICODE
     );
+
 } catch (PDOException $e) {
+
     error_log($e->getMessage());
+
     http_response_code(500);
+
     echo json_encode([
         "error" => "No se pudieron cargar los comentarios."
     ]);

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi cuenta · Geek Omniverse</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="site-header__bar">
+
+            <a href="index.html" class="logo">
+                GEEK<span>OMNI</span>VERSE
+            </a>
+
+            <div class="header-actions">
+                <div class="auth-area" data-auth-area></div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main id="main">
+
+        <section class="page" style="--accent: var(--void-purple)">
+
+            <div class="container">
+
+                <p class="eyebrow">Tu espacio</p>
+
+                <h1 class="section-title">
+                    Mi cuenta
+                </h1>
+
+                <p class="section-lede">
+                    Estos son los datos de tu sesión actual.
+                </p>
+
+                <div class="panel" style="padding: 1.5rem; max-width: 600px;">
+
+                    <p>
+                        <strong>Nombre de usuario:</strong>
+                        <span data-profile-name>Cargando…</span>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <span data-profile-email></span>
+                    </p>
+
+                    <p>
+                        <a class="btn" href="../php/logout.php">
+                            Cerrar sesión
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
